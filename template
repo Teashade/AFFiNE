@@ -1,0 +1,16 @@
+captainVersion: 4
+caproverOneClickApp:
+    instructions:
+        start: AFFiNE is the next-gen knowledge base for professionals that brings planning, sorting and creating all together.
+        end: AFFiNE is deployed. It will take up to 2 minutes for AFFiNE to be ready. Before that, you might see a 502 error page.
+########
+version: '3.3'
+
+services:
+   affine:
+     image: 'ghcr.io/toeverything/affine:nightly-latest'
+     ports:
+       - '4200:3000'
+     restart: always
+     environment:
+volumes:
